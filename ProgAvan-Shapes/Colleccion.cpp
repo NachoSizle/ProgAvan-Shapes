@@ -11,23 +11,16 @@ Colleccion::Colleccion()
 {
 	for (int i = 1; i < 4; i++)
 	{
-		double f = (double)rand() / RAND_MAX;
-		double randomDouble = (i * 0.1f) + f * ((i * 0.1f) - (i * 0.1f));
-
-		this->shapes.push_back(new Rectangulo(Punto(randomDouble + 1, randomDouble + 2), Punto((randomDouble + 1) / randomDouble, (randomDouble + 2) / randomDouble)));
+		this->shapes.push_back(new Rectangulo(Punto(this->getRandomNumber(i), this->getRandomNumber(i)), Punto(this->getRandomNumber(i), this->getRandomNumber(i))));
 	}
 	for (int i = 3; i < 7; i++)
 	{
-		double f = (double)rand() / RAND_MAX;
-		double randomDouble = (i * 0.1f) + f * ((i * 0.1f) - (i * 0.1f));
-		Rectangulo rect = Rectangulo(Punto(randomDouble + 1, randomDouble + 2), Punto((randomDouble + 1) / randomDouble, (randomDouble + 2) / randomDouble));
+		Rectangulo rect = Rectangulo(Punto(this->getRandomNumber(i), this->getRandomNumber(i)), Punto(this->getRandomNumber(i), this->getRandomNumber(i)));
 		this->shapes.push_back(new Cuadrado(rect));
 	}
 	for (int i = 0; i < 3; i++)
 	{
-		double f = (double)rand() / RAND_MAX;
-		double randomDouble = (i * 0.1f) + f * ((i * 0.1f) - (i * 0.1f));
-		this->shapes.push_back(new Circulo(Punto(randomDouble + 1, randomDouble + 2), randomDouble + 0.5f));
+		this->shapes.push_back(new Circulo(Punto(this->getRandomNumber(i), this->getRandomNumber(i)), this->getRandomNumber(i)));
 	}
 }
 
@@ -59,4 +52,9 @@ double Colleccion::getTotalArea()
 	}
 	*/
 	return totalArea;
+}
+
+double Colleccion::getRandomNumber(int cte) {
+    double f = (double)rand() / RAND_MAX;
+    return ((cte * 0.1f) + f * ((cte) - (cte * 0.01f))) * 10;
 }

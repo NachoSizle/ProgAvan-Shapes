@@ -14,4 +14,5 @@ public:
 	~Colleccion();
 	list<IFigure*> getShapes();
 	double getTotalArea();
+    double getRandomNumber(int cte);
 };
