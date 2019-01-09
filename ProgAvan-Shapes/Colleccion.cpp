@@ -9,16 +9,33 @@ using namespace std;
 
 Colleccion::Colleccion()
 {
-	for (int i = 1; i < 4; i++)
+    for (int i = 1; i < 4; i++)
+    {
+        this->shapes.push_back(new Rectangulo(Punto(this->getRandomNumber(i), this->getRandomNumber(i)), Punto(this->getRandomNumber(i), this->getRandomNumber(i))));
+    }
+    for (int i = 1; i < 4; i++)
+    {
+        Rectangulo rect = Rectangulo(Punto(this->getRandomNumber(i), this->getRandomNumber(i)), Punto(this->getRandomNumber(i), this->getRandomNumber(i)));
+        this->shapes.push_back(new Cuadrado(rect));
+    }
+    for (int i = 1; i < 5; i++)
+    {
+        this->shapes.push_back(new Circulo(Punto(this->getRandomNumber(i), this->getRandomNumber(i)), this->getRandomNumber(i)));
+    }
+}
+
+Colleccion::Colleccion(int numMaxElement)
+{
+	for (int i = 0; i < numMaxElement/2; i++)
 	{
 		this->shapes.push_back(new Rectangulo(Punto(this->getRandomNumber(i), this->getRandomNumber(i)), Punto(this->getRandomNumber(i), this->getRandomNumber(i))));
 	}
-	for (int i = 3; i < 7; i++)
+	for (int i = 0; i < numMaxElement/4; i++)
 	{
 		Rectangulo rect = Rectangulo(Punto(this->getRandomNumber(i), this->getRandomNumber(i)), Punto(this->getRandomNumber(i), this->getRandomNumber(i)));
 		this->shapes.push_back(new Cuadrado(rect));
 	}
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < numMaxElement/4; i++)
 	{
 		this->shapes.push_back(new Circulo(Punto(this->getRandomNumber(i), this->getRandomNumber(i)), this->getRandomNumber(i)));
 	}
@@ -37,20 +54,25 @@ double Colleccion::getTotalArea()
 {
 	double totalArea = 0.0f;
 
-	for (auto it : this->shapes)
-	{
-		totalArea += it->getArea();
-	}
-
-	/*
-	list<IFigure*>::iterator i = this->shapes.begin();
-	while (i != this->shapes.end())
-	{
-		totalArea += (*i)->getArea();
-		this->shapes.erase(i);
-		i++;
-	}
-	*/
+//    //  FORMA INNEFICIENTE (POCOS ELEMENTOS)
+//    if (this->shapes.size() == 10) {
+//        for (auto it : this->shapes)
+//        {
+//            totalArea += it->getArea();
+//        }
+//    } else {
+//    //  FORMA EFICIENTE (PARA MUCHOS ELEMENTOS)
+//        for_each(this->shapes.begin(), this->shapes.end(),
+//                 [&totalArea](auto const& elem) mutable   // Para cada elemento, getArea() y sumamos la variable
+//                 {                                        // totalArea que almacena el area total
+//                     totalArea += (*elem).getArea();
+//                 });
+//    }
+    for (auto it : this->shapes)
+    {
+        totalArea += it->getArea();
+    }
+    
 	return totalArea;
 }
 

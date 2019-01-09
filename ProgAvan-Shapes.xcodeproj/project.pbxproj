@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03D0A0B521E6A6B40057AF30 /* Cuadrado.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03D0A0AE21E6A6B40057AF30 /* Cuadrado.cpp */; };
+		03D0A0B621E6A6B40057AF30 /* Punto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03D0A0AF21E6A6B40057AF30 /* Punto.cpp */; };
+		03D0A0B721E6A6B40057AF30 /* Colleccion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03D0A0B221E6A6B40057AF30 /* Colleccion.cpp */; };
+		03D0A0B821E6A6B40057AF30 /* Rectangulo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03D0A0B321E6A6B40057AF30 /* Rectangulo.cpp */; };
+		03D0A0B921E6A6B40057AF30 /* Circulo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03D0A0B421E6A6B40057AF30 /* Circulo.cpp */; };
 		43FD066021E5F53500B48C14 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43FD065F21E5F53500B48C14 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +28,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03D0A0AA21E6A6B40057AF30 /* Cuadrado.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cuadrado.h; sourceTree = "<group>"; };
+		03D0A0AB21E6A6B40057AF30 /* Rectangulo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangulo.h; sourceTree = "<group>"; };
+		03D0A0AC21E6A6B40057AF30 /* Colleccion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colleccion.h; sourceTree = "<group>"; };
+		03D0A0AD21E6A6B40057AF30 /* Punto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Punto.h; sourceTree = "<group>"; };
+		03D0A0AE21E6A6B40057AF30 /* Cuadrado.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cuadrado.cpp; sourceTree = "<group>"; };
+		03D0A0AF21E6A6B40057AF30 /* Punto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Punto.cpp; sourceTree = "<group>"; };
+		03D0A0B021E6A6B40057AF30 /* Circulo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circulo.h; sourceTree = "<group>"; };
+		03D0A0B121E6A6B40057AF30 /* IFigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFigure.h; sourceTree = "<group>"; };
+		03D0A0B221E6A6B40057AF30 /* Colleccion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Colleccion.cpp; sourceTree = "<group>"; };
+		03D0A0B321E6A6B40057AF30 /* Rectangulo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rectangulo.cpp; sourceTree = "<group>"; };
+		03D0A0B421E6A6B40057AF30 /* Circulo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Circulo.cpp; sourceTree = "<group>"; };
 		43FD065C21E5F53500B48C14 /* ProgAvan-Shapes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ProgAvan-Shapes"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FD065F21E5F53500B48C14 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +73,17 @@
 		43FD065E21E5F53500B48C14 /* ProgAvan-Shapes */ = {
 			isa = PBXGroup;
 			children = (
+				03D0A0B421E6A6B40057AF30 /* Circulo.cpp */,
+				03D0A0B021E6A6B40057AF30 /* Circulo.h */,
+				03D0A0B221E6A6B40057AF30 /* Colleccion.cpp */,
+				03D0A0AC21E6A6B40057AF30 /* Colleccion.h */,
+				03D0A0AE21E6A6B40057AF30 /* Cuadrado.cpp */,
+				03D0A0AA21E6A6B40057AF30 /* Cuadrado.h */,
+				03D0A0B121E6A6B40057AF30 /* IFigure.h */,
+				03D0A0AF21E6A6B40057AF30 /* Punto.cpp */,
+				03D0A0AD21E6A6B40057AF30 /* Punto.h */,
+				03D0A0B321E6A6B40057AF30 /* Rectangulo.cpp */,
+				03D0A0AB21E6A6B40057AF30 /* Rectangulo.h */,
 				43FD065F21E5F53500B48C14 /* main.cpp */,
 			);
 			path = "ProgAvan-Shapes";
@@ -118,7 +145,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03D0A0B521E6A6B40057AF30 /* Cuadrado.cpp in Sources */,
+				03D0A0B821E6A6B40057AF30 /* Rectangulo.cpp in Sources */,
 				43FD066021E5F53500B48C14 /* main.cpp in Sources */,
+				03D0A0B721E6A6B40057AF30 /* Colleccion.cpp in Sources */,
+				03D0A0B621E6A6B40057AF30 /* Punto.cpp in Sources */,
+				03D0A0B921E6A6B40057AF30 /* Circulo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

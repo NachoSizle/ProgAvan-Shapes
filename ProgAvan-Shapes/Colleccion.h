@@ -11,6 +11,7 @@ private:
 
 public:
 	Colleccion();
+    Colleccion(int numMaxElement);
 	~Colleccion();
 	list<IFigure*> getShapes();
 	double getTotalArea();
