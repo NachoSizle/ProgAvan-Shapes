@@ -54,25 +54,20 @@ double Colleccion::getTotalArea()
 {
 	double totalArea = 0.0f;
 
-//    //  FORMA INNEFICIENTE (POCOS ELEMENTOS)
-//    if (this->shapes.size() == 10) {
-//        for (auto it : this->shapes)
-//        {
-//            totalArea += it->getArea();
-//        }
-//    } else {
-//    //  FORMA EFICIENTE (PARA MUCHOS ELEMENTOS)
-//        for_each(this->shapes.begin(), this->shapes.end(),
-//                 [&totalArea](auto const& elem) mutable   // Para cada elemento, getArea() y sumamos la variable
-//                 {                                        // totalArea que almacena el area total
-//                     totalArea += (*elem).getArea();
-//                 });
-//    }
-    for (auto it : this->shapes)
-    {
-        totalArea += it->getArea();
+    //  FORMA INNEFICIENTE (POCOS ELEMENTOS)
+    if (this->shapes.size() == 10) {
+        for_each(this->shapes.begin(), this->shapes.end(),
+                 [&totalArea](auto const& elem) mutable   // Para cada elemento, getArea() y sumamos la variable
+                 {                                        // totalArea que almacena el area total
+                     totalArea += (*elem).getArea();
+                 });
+    } else {
+    //  FORMA EFICIENTE (PARA MUCHOS ELEMENTOS)
+        for (auto it : this->shapes)
+        {
+            totalArea += it->getArea();
+        }
     }
-    
 	return totalArea;
 }
 
